@@ -1,10 +1,10 @@
-import os
+vimport os
 import shutil
 import hashlib
 import time
 
 LOGS_FOLDER = '/content/RVC/logs'
-WEIGHTS_FOLDER = '/content/RVC/weights'
+WEIGHTS_FOLDER = '/content/RVC/assets/weights'
 GOOGLE_DRIVE_PATH = '/content/drive/MyDrive/RVC_Backup'
 
 def import_google_drive_backup():
