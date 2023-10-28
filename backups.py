@@ -11,7 +11,7 @@ def import_google_drive_backup():
     print("Importing Google Drive backup...")
     GOOGLE_DRIVE_PATH = '/content/drive/MyDrive/RVC_Backup' # change this to your Google Drive path
     LOGS_FOLDER = '/content/RVC/logs'
-    WEIGHTS_FOLDER = '/content/RVC/weights'
+    WEIGHTS_FOLDER = '/content/RVC/assets/weights'
     weights_exist = False
     for root, dirs, files in os.walk(GOOGLE_DRIVE_PATH):
         for filename in files:
