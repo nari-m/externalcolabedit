@@ -115,7 +115,7 @@ def backup_files():
             copy_weights_folder_to_drive()
             sleep_time = 15
         else:
-            sleep_time = 1
+            sleep_time = 10
         with open(last_backup_timestamps_path, 'w') as f:
             for filepath, timestamp in last_backup_timestamps.items():
                 f.write(f'{filepath}:{timestamp}\n')
