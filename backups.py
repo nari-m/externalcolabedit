@@ -3,15 +3,15 @@ import shutil
 import hashlib
 import time
 
-LOGS_FOLDER = '/content/Retrieval-based-Voice-Conversion-WebUI/logs'
-WEIGHTS_FOLDER = '/content/Retrieval-based-Voice-Conversion-WebUI/weights'
+LOGS_FOLDER = '/content/RVC/logs'
+WEIGHTS_FOLDER = '/content/RVC/weights'
 GOOGLE_DRIVE_PATH = '/content/drive/MyDrive/RVC_Backup'
 
 def import_google_drive_backup():
     print("Importing Google Drive backup...")
     GOOGLE_DRIVE_PATH = '/content/drive/MyDrive/RVC_Backup' # change this to your Google Drive path
-    LOGS_FOLDER = '/content/Retrieval-based-Voice-Conversion-WebUI/logs'
-    WEIGHTS_FOLDER = '/content/Retrieval-based-Voice-Conversion-WebUI/weights'
+    LOGS_FOLDER = '/content/RVC/logs'
+    WEIGHTS_FOLDER = '/content/RVC/weights'
     weights_exist = False
     for root, dirs, files in os.walk(GOOGLE_DRIVE_PATH):
         for filename in files:
@@ -115,7 +115,7 @@ def backup_files():
             copy_weights_folder_to_drive()
             sleep_time = 15
         else:
-            sleep_time = 0.1
+            sleep_time = 1
         with open(last_backup_timestamps_path, 'w') as f:
             for filepath, timestamp in last_backup_timestamps.items():
                 f.write(f'{filepath}:{timestamp}\n')
